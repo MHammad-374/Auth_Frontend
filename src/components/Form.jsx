@@ -14,7 +14,6 @@ function Form({ name_heading, input_fields, forgot_password, button, loading, ac
 
 
     const onSubmit = data => {
-        // console.log(data)
         if (signUp) signUp(data.username, data.email, data.password)
         if (login) login(data.email, data.password)
         if (forgotPassword) forgotPassword(data.email)
@@ -56,16 +55,6 @@ function Form({ name_heading, input_fields, forgot_password, button, loading, ac
                                                     value: 6,
                                                     message: "Password must have at least 6 characters."
                                                 },
-                                                // pattern: {
-                                                //     value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-                                                //     message: ""
-                                                //     // "Password must include at least one uppercase letter, one lowercase letter, one number, and one special character.",
-                                                // },
-                                                // pattern: {
-                                                //     value: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
-                                                //     message: ""
-                                                // Password must include at least one letter, one number, and one special character.
-                                                // }
                                             } : {
                                                 required: {
                                                     value: true,
@@ -79,9 +68,6 @@ function Form({ name_heading, input_fields, forgot_password, button, loading, ac
                     })
                 }
                 {
-                    // button === "Confirm" ?
-                    //     <></>
-                    //     :
                         forgot_password ?
                             button === "Send" ?
                                 <NavLink

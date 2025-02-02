@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Form from '../components/form'
+import Form from '../components/form.jsx'
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,20 +21,12 @@ function ResetPassword() {
             name: "password",
             icon: <VpnKeyOutlinedIcon style={{ color: "#20B057", fontSize: "30px" }} />
         },
-        // {
-        //     id: 2,
-        //     type: "password",
-        //     placeholder: "Confirm Password",
-        //     name: "password",
-        //     icon: <VpnKeyOutlinedIcon style={{ color: "#20B057", fontSize: "30px" }} />
-        // },
     ]
 
     const resetPassword = async (password) => {
         setLoading(true)
         const url = window.location.href;
         const lastPart = url.split('/').pop();
-        // console.log(`${import.meta.env.VITE_API_URL}/api/auth/reset-password/${lastPart}`)
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/reset-password/${lastPart}`, {
             method: "POST",
             headers: {

@@ -18,7 +18,6 @@ function Home() {
     draggable: true,
     progress: undefined,
     theme: "light",
-    // transition: Bounce,
   });
 
   const checkAuth = async () => {
@@ -39,25 +38,21 @@ function Home() {
         navigate("/email-verification")
       }
       else setUser("Please Login...");
-      // console.log(data.message);
     } catch (error) {
       console.error(error.message);
     }
   }
 
   const logout = async () => {
-    // console.log("LOGOUT")
     setLogin(false);
     const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json'
       },
-      // body: JSON.stringify({ password }),
       credentials: "include"
     })
-    const data = await res.json();
-    // if (res.status === 200) 
+    const data = await res.json(); 
     notify(data.message)
     checkAuth();
   }

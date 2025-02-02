@@ -43,7 +43,6 @@ function EmailVerification() {
             draggable: true,
             progress: undefined,
             theme: "light",
-            // transition: Bounce,
         });
     }
 
@@ -61,26 +60,18 @@ function EmailVerification() {
                 return res.json().then(data => {
                     if (res.status === 200) {
                         navigate("/"); // Navigate on successful validation
-                        // return data; // Success: return data to the next `.then()`
                     } else {
-                        // throw new Error(data.message || 'Something went wrong'); // Extract and throw the backend error message
                         notify(data.message || "Somthing went wrong");
                     }
                 });
             })
-            // .then(data => {
-            // console.log(data.message); // Backend's success message
-            // })
             .catch((error) => console.log("Something went wrong! \n" + error))
         setLoading(false)
     }
 
     const onSubmit = (data) => {
-        // console.log(data)
         const otp = Object.values(data.otp).join("");  // Combine OTP values
-        // console.log("Submitted OTP:", otp);
         verifyEmail(otp)
-
     };
 
     const checkAuth = async () => {
@@ -95,7 +86,6 @@ function EmailVerification() {
             })
             const data = await res.json();
             if (res.status != 200) navigate("/signup")
-            // notify(data.message); 2
         } catch (error) {
             console.error(error.message);
         }

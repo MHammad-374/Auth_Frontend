@@ -34,7 +34,6 @@ function ForgotPassword() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: Bounce,
     });
 
 

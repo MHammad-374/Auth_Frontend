@@ -39,13 +39,6 @@ export default function Example({ logout, login }) {
                     key={item.name}
                     className='rounded-md px-3 py-2 text-sm font-medium text-gray-300'
                     to={`/${item.name.toLowerCase()}`}
-                    
-                    // href={item.href}
-                    // aria-current={item.current ? 'page' : undefined}
-                    // className={classNames(
-                    //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    //   'rounded-md px-3 py-2 text-sm font-medium',
-                    // )}
                   >
                     {item.name}
                   </NavLink>
@@ -122,12 +115,6 @@ export default function Example({ logout, login }) {
             <DisclosureButton
               key={item.name}
               as="a"
-              // href={item.href}
-              // aria-current={item.current ? 'page' : undefined}
-              // className={classNames(
-              //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-              //   'block rounded-md px-3 py-2 text-base font-medium',
-              // )}
             >
               {item.name}
             </DisclosureButton>

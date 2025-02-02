@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Form from '../components/form'
+import Form from '../components/form.jsx'
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
@@ -49,7 +49,6 @@ function Signup() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: Bounce,
     });
 
 

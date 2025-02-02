@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Form from '../components/form'
+import Form from '../components/form.jsx'
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import { useNavigate } from 'react-router-dom';
@@ -40,7 +40,6 @@ function Login() {
     draggable: true,
     progress: undefined,
     theme: "light",
-    // transition: Bounce,
   });
 
   const login = async (email, password) => {

@@ -32,7 +32,6 @@ function PasswordStrengthMeter({ password }) {
         if (/[^A-Za-z0-9]/.test(password)) strength++;
         if (/[0-9]/.test(password)) strength++;
 
-        // return strength
         if (strength < 1) {
             return "Very Weak"
         }
